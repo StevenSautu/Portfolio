@@ -1,0 +1,41 @@
+.App {
+    min-height: 100vh;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    transition: var(--transition);
+  }
+  
+  .App.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--light-text);
+  }
+  
+  main {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-family: var(--heading-font);
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,224 @@
+:root {
+  --selective-yellow: #FFBD11;
+  --sea-green: #118C45;
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333333;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.projects-section {
+  padding: 6rem 0;
+  background-color: var(--white);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.section-title .highlight {
+  color: var(--sea-green);
+  position: relative;
+}
+
+.section-title .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--selective-yellow);
+  z-index: -1;
+  opacity: 0.6;
+}
+/* Add this to your ProjectsSection.css */
+.project-description {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.project-image-container.logo-image {
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-image.logo-img {
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.github-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-image .github-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover .github-overlay {
+  opacity: 1;
+}
+
+.github-link {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--selective-yellow);
+  transform: translateY(-3px);
+}
+
+.github-link svg {
+  font-size: 2rem;
+}
+
+.project-content {
+  padding: 1.8rem;
+}
+
+.content-header h3 {
+  font-size: 1.4rem;
+  color: var(--sea-green);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-tag {
+  background-color: rgba(255, 189, 17, 0.1);
+  color: var(--black);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 4rem 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-image-container {
+    height: 200px;
+  }
+  
+  .project-image-container.logo-image {
+    padding: 1.5rem;
+  }
+  
+  .github-link {
+    font-size: 0.9rem;
+  }
+  
+  .github-link svg {
+    font-size: 1.8rem;
+  }
+}
