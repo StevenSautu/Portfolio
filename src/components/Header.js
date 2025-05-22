@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import resumePDF from '../assets/documents/Steven_Sautu_CV.pdf'; // Import your CV file
+import resumePDF from '../assets/documents/Steven_Sautu_CV.pdf'; 
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
