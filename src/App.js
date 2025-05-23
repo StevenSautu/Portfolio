@@ -12,7 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import DarkModeToggle from './components/DarkModeToggle';
 import Footer from './components/Footer';
 
-
+// Project data moved to separate file (recommended)
 import { projects } from './components/ProjectsSection';
 
 function App() {
