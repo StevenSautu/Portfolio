@@ -7,6 +7,8 @@ import sctImg from '../assets/images/projects/sct-logo.jpg';
 import smtImg from '../assets/images/projects/smt-logo.jpg';
 import vsImg from '../assets/images/projects/vs-logo.jpg';
 
+
+
 export const projects = [
   {
     id: 1,
