@@ -81,7 +81,7 @@ const Header = () => {
           </button>
         </div>
         
-        {/* Mobile Menu */}
+     
         <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
           <ul>
             <li><a href="#about" onClick={handleNavLinkClick}>About Me</a></li>
